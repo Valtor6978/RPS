@@ -32,6 +32,7 @@ body {
   background: var(--ContainerBackground);
   border-radius: 50%;
   box-shadow: 10px 10px 50px 10px rgba(255, 255, 255, 0.227);
+  z-index: 98;
 
 }
 
@@ -66,6 +67,86 @@ button a {
 button a:hover {
   transform: translate(0px,-3px);
   border-bottom: 2px solid rgb(255, 227, 227);
+}
+
+.joystick {
+  width: 200px;
+  animation: joystick 5s ease-in infinite;
+}
+
+.ball {
+  width: 500px;
+  animation: rotate 5s linear infinite;
+}
+
+.loader {
+  width: 32px;
+  height: 64px;
+  position: fixed;
+  z-index: 99;
+  background: 
+    radial-gradient(farthest-side at bottom,#F10C49 90%,#0000),
+    radial-gradient(farthest-side at top   ,#F10C49 90%,#0000),
+    radial-gradient(farthest-side at bottom,#f4dd51 90%,#0000),
+    radial-gradient(farthest-side at top   ,#f4dd51 90%,#0000),
+    radial-gradient(farthest-side at bottom,#e3aad6 90%,#0000),
+    radial-gradient(farthest-side at top   ,#e3aad6 90%,#0000);
+  background-size: 100% 25%;
+  background-repeat: no-repeat;
+  animation: loader 2s infinite;
+}
+.loader.hidden {
+  animation: fadeOut 2s;
+  animation-fill-mode: forwards;
+}
+
+
+/* Animations */
+
+@keyframes joystick {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(50px);
+  }
+  100% {
+    transform: translate(0px);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loader{
+  0%     {background-position:0 calc(1*100%/3),0 calc(2*100%/3),0 calc(1*100%/3),0 calc(2*100%/3),0 calc(1*100%/3),0 calc(2*100%/3)}
+  16.67% {background-position:0 calc(0*100%/3),0 calc(3*100%/3),0 calc(1*100%/3),0 calc(2*100%/3),0 calc(1*100%/3),0 calc(2*100%/3)}
+  33.33% {background-position:0 calc(0*100%/3),0 calc(3*100%/3),0 calc(0*100%/3),0 calc(3*100%/3),0 calc(1*100%/3),0 calc(2*100%/3)}
+  50%    {background-position:0 calc(0*100%/3),0 calc(3*100%/3),0 calc(0*100%/3),0 calc(3*100%/3),0 calc(0*100%/3),0 calc(3*100%/3)}
+  66.67% {background-position:0 calc(1*100%/3),0 calc(2*100%/3),0 calc(0*100%/3),0 calc(3*100%/3),0 calc(0*100%/3),0 calc(3*100%/3)}
+  83.33% {background-position:0 calc(1*100%/3),0 calc(2*100%/3),0 calc(1*100%/3),0 calc(2*100%/3),0 calc(0*100%/3),0 calc(3*100%/3)}
+  100%   {background-position:0 calc(1*100%/3),0 calc(2*100%/3),0 calc(1*100%/3),0 calc(2*100%/3),0 calc(1*100%/3),0 calc(2*100%/3)}
+}
+@keyframes fadeOut {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
 /* Media For Respawnsive Code */

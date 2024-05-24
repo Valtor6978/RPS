@@ -24,7 +24,19 @@ $.documentElement.style.setProperty("--BodyBackground" , "linear-gradient( rgb( 
 $.documentElement.style.setProperty("--ContainerBackground" , "linear-gradient(210deg , rgb( "+ R1 +" , "+ G1 +" , "+ B1 +" ) , rgb( "+ R +" , "+ G +" , "+ B +" )" )
 
 } 
-setInterval( randomBackgroundHandler,2000 )
+setInterval( randomBackgroundHandler,2500 )
+
+// --------   Loading Scripts =>
+
+let loaderElem = $.querySelector(".loader")
+
+window.addEventListener("load" , function () {
+    loaderElem.classList.add("hidden")
+})
+
+
+
+
 
 
 
