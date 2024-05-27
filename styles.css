@@ -17,6 +17,7 @@
 
 * {
     margin: 0;
+    overflow: hidden;
 }
 body {
     background: var(--BodyBackground);
@@ -51,7 +52,7 @@ body {
 
 .buttons button {
   display: flex;
-  margin: 20px;
+  margin: 15px;
   background-color: rgba(255, 0, 0, 0);
   border: 0; 
 }
@@ -72,46 +73,39 @@ button a:hover {
 .joystick {
   width: 200px;
   animation: joystick 5s ease-in infinite;
+  position: fixed;
+  margin-left: 200px;
+  margin-top: 10px;
 }
 
 .ball {
-  width: 500px;
+  margin-top: 15px;
+  width: 350px;
   animation: rotate 5s linear infinite;
 }
 
-.loader {
-  width: 32px;
-  height: 64px;
+.cloud {
   position: fixed;
-  z-index: 99;
-  background: 
-    radial-gradient(farthest-side at bottom,#F10C49 90%,#0000),
-    radial-gradient(farthest-side at top   ,#F10C49 90%,#0000),
-    radial-gradient(farthest-side at bottom,#f4dd51 90%,#0000),
-    radial-gradient(farthest-side at top   ,#f4dd51 90%,#0000),
-    radial-gradient(farthest-side at bottom,#e3aad6 90%,#0000),
-    radial-gradient(farthest-side at top   ,#e3aad6 90%,#0000);
-  background-size: 100% 25%;
-  background-repeat: no-repeat;
-  animation: loader 2s infinite;
-}
-.loader.hidden {
-  animation: fadeOut 2s;
-  animation-fill-mode: forwards;
+  width: 600px;
+  height: 700px;
+  display: flex;
 }
 
+.scissor {
+  display: none;
+}
 
 /* Animations */
 
 @keyframes joystick {
   0% {
-    transform: translateX(0px);
+    transform: translateY(0px);
   }
   50% {
-    transform: translateX(50px);
+    transform: translateY(50px);
   }
   100% {
-    transform: translate(0px);
+    transform: translateY(0px);
   }
 }
 
@@ -142,12 +136,6 @@ button a:hover {
   83.33% {background-position:0 calc(1*100%/3),0 calc(2*100%/3),0 calc(1*100%/3),0 calc(2*100%/3),0 calc(0*100%/3),0 calc(3*100%/3)}
   100%   {background-position:0 calc(1*100%/3),0 calc(2*100%/3),0 calc(1*100%/3),0 calc(2*100%/3),0 calc(1*100%/3),0 calc(2*100%/3)}
 }
-@keyframes fadeOut {
-  100% {
-    opacity: 0;
-    visibility: hidden;
-  }
-}
 
 /* Media For Respawnsive Code */
 
@@ -165,6 +153,24 @@ button a:hover {
   }
   button a {
     font-size: 40px;
+  }
+  .joystick {
+    width: 500px;
+    margin: 0;
+  }
+  .ball {
+    width: 600px;
+  }
+  .cloud {
+    width: 1100px;
+  }
+  .scissor {
+    display: block;
+    width: 250px;
+    height: auto;
+    margin-left: 300px;
+    display: flex;
+    transform: translate(700px,-450px);
   }
 }
 
