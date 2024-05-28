@@ -28,15 +28,17 @@ setInterval( randomBackgroundHandler,2500 )
 
 // --------   Loading Scripts =>
 
-let loaderElem = $.querySelector(".loader")
-
+let loader = $.querySelector(".loader")
 window.addEventListener("load" , function () {
-    loaderElem.classList.add("hidden")
+    loader.style.display = "none"
 })
 
+// Prevent Defult =>
 
 
-
+    $.addEventListener("keydown" , function (event) {
+        event.preventDefault()
+    })
 
 
 
