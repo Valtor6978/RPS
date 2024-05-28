@@ -31,6 +31,7 @@ setInterval( randomBackgroundHandler,2500 )
 let loader = $.querySelector(".loader")
 window.addEventListener("load" , function () {
     loader.style.display = "none"
+    $.body.classList.remove("hidden")
 })
 
 // Prevent Defult =>
@@ -40,8 +41,22 @@ window.addEventListener("load" , function () {
         event.preventDefault()
     })
 
+// --------   Ship Of Start Container => 
+    function shipHandler () {
 
-
+        let LU = Math.floor(Math.random() * 65)
+        let RU = Math.floor(Math.random() * 65)
+        let LD = Math.floor(Math.random() * 65)
+        let RD = Math.floor(Math.random() * 65)
+        
+    
+        $.documentElement.style.setProperty("--radiusTL" , LU+"%")
+        $.documentElement.style.setProperty("--radiusTR" , RU+"%")
+        $.documentElement.style.setProperty("--radiusDL" , LD+"%")
+        $.documentElement.style.setProperty("--radiusDR" , RD+"%")
+    }
+    
+    setInterval(shipHandler ,1000)
 
 
 

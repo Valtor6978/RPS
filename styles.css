@@ -19,7 +19,7 @@
     margin: 0;
     overflow: hidden;
 }
-body {
+#body {
     background: var(--BodyBackground);
     width: 100%;
     height: 100vh;
@@ -126,7 +126,9 @@ button a:hover {
     transform: rotate(360deg);
   }
 }
-
+.hidden :not(.loader) {
+  filter: blur(50px);
+}
 .loader {
   position: relative;
   width: 64px;
