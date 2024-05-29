@@ -199,6 +199,12 @@ button a:hover {
     display: flex;
     transform: translate(700px,-450px);
   }
+  .next-btn {
+    display: none;
+  }
+  .prev-btn {
+    display: none;
+  }
 }
 
 /* Extra And Helpfull Code */

@@ -1,9 +1,9 @@
 
 :root {
     --radiusTL: 50%;
-    --radiusTR: 65%;
-    --radiusDL: 95%;
-    --radiusDR: 25%;
+    --radiusTR: 50%;
+    --radiusDL: 50%;
+    --radiusDR: 50%;
 }
 
 *{
@@ -11,25 +11,49 @@
 } 
 
 #start-body {
-    background-color: #253;
+    background-color: #252525;
 }
 
 .start-container {
-    min-width: 350px;
+    min-width: 340px;
     max-width: 650px;
     width: 50%;
     height: 50vh;
-    background-color: aliceblue;
+    background: linear-gradient(rgb(250, 114, 104) , rgb(176, 35, 95));
     border-top-left-radius:var(--radiusTL);
     border-top-right-radius:var(--radiusTR);
     border-bottom-left-radius:var(--radiusDL);
     border-bottom-right-radius:var(--radiusDR);
     transition: all 1s;
+    box-shadow: 15px 20px 5px white;
+    border: 2px solid rgb(255, 255, 255) ;
 }
 
 .game-name {
     font-size: xxx-large;
     font-family: MT;
+    text-align: center;
 }
 
-.next-btn {}
+.next-btn , .prev-btn {
+    width: 100px;
+    height:60px;
+    background: none;
+    border: none;
+    border-radius: 50%;
+    margin-top: 120px;
+    cursor: pointer;
+    font-size: xx-large;
+    color: white;
+}
+
+.next-btn {    
+    background-color: rgb(85, 175, 55);
+    transform: translateX(-50px);
+    
+}
+
+.prev-btn {
+    background-color: rgb(175, 64, 64);
+    transform: translateX(50px);
+}
