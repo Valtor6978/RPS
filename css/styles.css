@@ -17,12 +17,12 @@
 
 * {
     margin: 0;
-    overflow: hidden;
 }
 #body {
     background: var(--BodyBackground);
     width: 100%;
-    height: 100vh;
+    height: 120vh;
+    overflow: hidden;
 }
 
 .container {
@@ -57,7 +57,7 @@
   border: 0; 
 }
 
-button a {
+.buttons button a {
   text-decoration: none;
   color: #fff;
   font-family: MT;
@@ -65,7 +65,7 @@ button a {
   transition: all 1s;
 }
 
-button a:hover {
+.buttons button a:hover {
   transform: translate(0px,-3px);
   border-bottom: 2px solid rgb(255, 227, 227);
 }
@@ -178,7 +178,7 @@ button a:hover {
   .buttons div {
     margin-top: 80px;
   }
-  button a {
+  .buttons button a {
     font-size: 40px;
   }
   .joystick {
@@ -199,11 +199,15 @@ button a:hover {
     display: flex;
     transform: translate(700px,-450px);
   }
+  /* Start.css Respawnsive */
   .next-btn {
     display: none;
   }
   .prev-btn {
     display: none;
+  }
+  .exit-to-menu {
+    font-size: x-large;
   }
 }
 

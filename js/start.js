@@ -1,5 +1,5 @@
 
-// --------   Ship Of Start Container => 
+// --------   Shape Of "Start.HTML" Container => 
 
     function shipHandler () {
 
@@ -16,6 +16,23 @@
     }
     
     setInterval(shipHandler ,1000)
+
+// --------   Function For Game Colors =>
+
+    function GameColorHandler () {
+        if (gameNameElem.innerHTML === "Rock Paper Scissors") {
+            document.documentElement.style.setProperty("--backgroundColor" , "#023535")
+            document.documentElement.style.setProperty("--containerColor" , "linear-gradient( #015958, #2b7889)")
+        }
+        else if (gameNameElem.innerHTML === "Flappy Bird") {
+            document.documentElement.style.setProperty("--backgroundColor" , "#121335")
+            document.documentElement.style.setProperty("--containerColor" , "linear-gradient( #2b7889 , #0c2c61)")
+        } 
+        else if (gameNameElem.innerHTML === "Tic Tac Toe") {
+            document.documentElement.style.setProperty("--backgroundColor" , "#430337")
+            document.documentElement.style.setProperty("--containerColor" , "linear-gradient( #8e27aa , #8e3c6b)")
+        } 
+    }
 
 // --------   Dom Handler For Games =>
 
@@ -36,7 +53,8 @@ function nextBtnHandler () {
     if (indexOfGame === gamesName.length) {
         indexOfGame = 0
     }
-    gameNameElem.innerHTML = gamesName[indexOfGame]
+    gameNameElem.innerHTML = gamesName[indexOfGame] 
+    GameColorHandler ()
 }
 
 function prevBtnHandler () {
@@ -45,6 +63,7 @@ function prevBtnHandler () {
         indexOfGame = gamesName.length-1
     }
     gameNameElem.innerHTML = gamesName[indexOfGame]
+    GameColorHandler ()
 }
 
 
@@ -58,5 +77,10 @@ function prevBtnHandler () {
     })
     nextBtn.addEventListener("click" , nextBtnHandler)
     prevBtn.addEventListener("click" , prevBtnHandler)
+
+
+
+
+
 
 

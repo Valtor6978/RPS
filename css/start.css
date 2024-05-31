@@ -4,6 +4,9 @@
     --radiusTR: 50%;
     --radiusDL: 50%;
     --radiusDR: 50%;
+
+    --backgroundColor:  #023535;
+    --containerColor : linear-gradient( #015958, #2b7889);
 }
 
 *{
@@ -11,7 +14,9 @@
 } 
 
 #start-body {
-    background-color: #252525;
+    background-color: var(--backgroundColor);
+    overflow: hidden;
+    transition: ease-in-out 1.2s;
 }
 
 .start-container {
@@ -19,12 +24,12 @@
     max-width: 650px;
     width: 50%;
     height: 50vh;
-    background: linear-gradient(rgb(250, 114, 104) , rgb(176, 35, 95));
+    background: var(--containerColor);
     border-top-left-radius:var(--radiusTL);
     border-top-right-radius:var(--radiusTR);
     border-bottom-left-radius:var(--radiusDL);
     border-bottom-right-radius:var(--radiusDR);
-    transition: all 1s;
+    transition: ease-in-out 1s;
     box-shadow: 15px 20px 5px white;
     border: 2px solid rgb(255, 255, 255) ;
 }
@@ -33,6 +38,7 @@
     font-size: xxx-large;
     font-family: MT;
     text-align: center;
+    color: rgb(192, 194, 196);
 }
 
 .next-btn , .prev-btn {
@@ -40,20 +46,39 @@
     height:60px;
     background: none;
     border: none;
-    border-radius: 50%;
     margin-top: 120px;
     cursor: pointer;
-    font-size: xx-large;
+    font-size: 50px;
     color: white;
 }
 
 .next-btn {    
-    background-color: rgb(85, 175, 55);
     transform: translateX(-50px);
-    
+
+}
+.prev-btn {
+    transform: translateX(50px);
 }
 
-.prev-btn {
-    background-color: rgb(175, 64, 64);
-    transform: translateX(50px);
+.next-btn:hover , .prev-btn:hover {
+    color: rgb(155, 155, 155); 
+    transition: all 0.6s;
+}
+
+.exit-to-menu {
+    margin: 15px;
+    width: 100px;
+    background: none;
+    border: none;
+    font-size: large;
+}
+.exit-to-menu a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    position: fixed;
+}
+.exit-to-menu a:hover {
+    opacity: 0.7;
+    transition: all 1s;
 }
