@@ -39,6 +39,7 @@
     font-family: MT;
     text-align: center;
     color: rgb(192, 194, 196);
+    display: flex;
 }
 
 .next-btn , .prev-btn {
@@ -54,7 +55,6 @@
 
 .next-btn {    
     transform: translateX(-50px);
-
 }
 .prev-btn {
     transform: translateX(50px);

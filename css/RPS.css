@@ -1,0 +1,57 @@
+#RPS-body {
+    background-color: #023535;
+    overflow: hidden;
+    /* transition: ease-in-out 1.2s; */
+}
+
+.screen {
+    display: flex;
+    z-index: 3;
+    width: 330px;
+    height: 250px;
+    background-color: #252525;
+    border: 1px solid white;
+    border-bottom: 15px solid rgb(20, 20, 20);
+    margin-top: 50px;
+    border-radius: 15px 15px 5px 5px;
+    
+}
+.stick {
+    display: flex;
+    z-index: 2;
+    width: 20px;
+    height: 55px;
+    background-color: white;
+    border: 200px;
+}
+.down-screen {
+    display: flex;
+    z-index: 1;
+    width: 330px;
+    height: 50px;
+    background-color: rgb(20, 20, 20);
+    border-radius: 50%;
+}
+
+.user-container {
+    width: 350px;
+    height: 300px;
+    background-color: rgba(255, 255, 255, 0.1);
+    filter: blur(5px);
+    transform: skew(10deg , 0deg);
+}
+
+
+.hidden :not(.loader) {
+    filter: blur(50px);
+}
+
+
+
+
+
+
+
+
+
+
