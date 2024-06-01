@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="img/icon.png" type="image/icon type">
+    <link rel="icon" href="img/Rock.png" type="image/icon type">
     <link rel="stylesheet" rel="stylesheet" href="css/start.css">
     <link rel="stylesheet" rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" rel="stylesheet" href="css/RPS.css">
@@ -13,18 +13,21 @@
 
     <center>
             <div class="screen">
-                
+                <h1 class="result-modal">Select an item</h1>
+                <p style="display: none;" class="AI">AI Choice</p>
+                <img class="img-modal" alt="AI Choise" style="display: none;">
             </div>
             <div class="stick"></div>
             <div class="down-screen"></div>
     </center>
 
-<center>
-        <div class="user-container">
-    
-        </div>
-</center>
+<div class="user-choise">
+    <img id="rock" src="img/Rock.png">
+    <img id="paper" src="img/paper.png">
+<center>    <img id="scissors"  src="img/userScssors.png">  </center>
+</div>
 
+<script src="js/RPS.js" defer></script>
 <script src="js/script.js" defer></script>
 </body>
 </html>
