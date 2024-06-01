@@ -7,7 +7,7 @@ const $ = document
 let bodyColor = $.querySelector("body")
 
 
-let R , G , B , R1 , G1 , B1 
+let R , G , B , R1 , G1 , B1
 
 function randomBackgroundHandler (){
     R = Math.floor(Math.random() * 255)
