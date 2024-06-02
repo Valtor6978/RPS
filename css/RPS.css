@@ -23,6 +23,7 @@
     height: 55px;
     background-color: white;
     border: 200px;
+    transition: ease-in-out 2s ;
 }
 .down-screen {
     display: flex;
@@ -30,6 +31,7 @@
     height: 50px;
     background-color: rgb(20, 20, 20);
     border-radius: 50%;
+    transition: ease-in-out 2s ;
 }
 
 
@@ -37,6 +39,7 @@
     width: 100%;
     color: aliceblue;
     margin-top: 25px;
+    transition: ease-in 0.5s;
 }
 .AI {
     color: #00cac7;
@@ -58,7 +61,8 @@
     margin-right: auto;
     margin-left: auto;
     margin-top: 30px;
-    box-shadow: 0px 0px 30px red;
+    box-shadow: 0px 0px 30px gray;
+    transition: ease-in-out 2s ;
 }
 .user-choise img {
     width: 95px;
@@ -81,5 +85,16 @@
 }
 
 
+.score {
+    position: fixed;
+    height: 100px;
+    width: 80px;
+    transform: translate(80px , 100px);
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
 
-
+.score div {
+    color: gray;
+}

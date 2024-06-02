@@ -24,6 +24,7 @@ function gameRunerRPS (event) {
 
 
     let userRPS = event.target.id
+
     if (userRPS === resultArray[indexOfRPS]) {
         resultModal.innerHTML = "Game Tie"
         resultModal.style.color = "white"
@@ -48,13 +49,13 @@ function gameRunerRPS (event) {
         resultModal.innerHTML = "You Lost"
         resultModal.style.color = "red"
     }
-    
-    
-    console.log(userRPS)
-    console.log(resultArray[indexOfRPS])
-}
+}    
 
-
+document.body.addEventListener("keyup" , function (event) {
+    if (event.which === 27) {
+        window.open("start.html" , "_self")
+    }
+})
 
 rock.addEventListener("click" , gameRunerRPS )
 paper.addEventListener("click" , gameRunerRPS )
