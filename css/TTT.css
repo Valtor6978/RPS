@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient( #b61e9a , #430337 );
+}
+
+.container-of-TTT {
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+
+}
+
+#game-container {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 10px;
+    margin-bottom: 20px;
+    color: #adadad;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+#reset-btn {
+    background-color: #adadad;
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+    border-radius: 50px;
+}
+
+#result {
+    font-weight: bold;
+    color: rgb(0, 195, 94);
+    margin-top: 10%;
+}

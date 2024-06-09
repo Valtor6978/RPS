@@ -22,7 +22,6 @@ function gameRunerRPS (event) {
         imgModal.style.display = "flex"
         imgModal.style.transform = "rotate(180deg)"
 
-
     let userRPS = event.target.id
 
     if (userRPS === resultArray[indexOfRPS]) {

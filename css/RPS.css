@@ -83,18 +83,3 @@
 #scissors {
     margin-top: 30px;
 }
-
-
-.score {
-    position: fixed;
-    height: 100px;
-    width: 80px;
-    transform: translate(80px , 100px);
-    display: flex;
-    flex-wrap: wrap;
-    align-content: space-between;
-}
-
-.score div {
-    color: gray;
-}
